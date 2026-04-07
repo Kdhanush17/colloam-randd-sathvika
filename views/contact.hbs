@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #333333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .header {
+      background-color: #4a6bff;
+      padding: 25px 30px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .message-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #4a6bff;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    .footer {
+      padding: 20px 30px;
+      background-color: #f8f9fa;
+      text-align: center;
+      font-size: 12px;
+      color: #777777;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #4a6bff;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin: 15px 0;
+      font-weight: 500;
+    }
+    
+    .signature {
+      margin-top: 30px;
+      border-top: 1px solid #eeeeee;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Thank You for Contacting Us</h1>
+    </div>
+    
+    <div class="content">
+      <p>Dear {{name}},</p>
+      
+      <p>We've received your message and want to thank you for reaching out to Job Portal. Our team is reviewing your inquiry and we'll get back to you as soon as possible.</p>
+      
+      <div class="message-box">
+        <p><em>{{message}}</em></p>
+      </div>
+      
+      <p>Typically, we respond within 1-2 business days. If your matter is urgent, please don't hesitate to call our support team at (123) 456-7890.</p>
+      
+      <p>In the meantime, you might find answers to common questions in our <a href="#" style="color: #4a6bff;">Help Center</a>.</p>
+      
+      <div class="signature">
+        <p>Best regards,</p>
+        <p><strong>The Job Portal Team</strong></p>
+        <img src="https://via.placeholder.com/150x50?text=Job+Portal+Logo" alt="Job Portal Logo" style="margin-top: 15px; height: 40px;">
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>This is an automated message. Please do not reply directly to this email.</p>
+      <p>&copy; 2025 Job Portal. All rights reserved.</p>
+      <p>
+        <a href="#" style="color: #4a6bff; text-decoration: none; margin: 0 5px;">Privacy Policy</a> | 
+        <a href="#" style="color: #4a6bff; text-decoration: none; margin: 0 5px;">Terms of Service</a> | 
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

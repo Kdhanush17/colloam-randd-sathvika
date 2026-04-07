@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Login Integration</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <h2>Login with Google</h2>
+
+  <div id="g_id_onload"
+       data-client_id="473971023950-jqei09eid34kugbg0glpct9vhj6fc5ca.apps.googleusercontent.com"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="false">
+  </div>
+
+  <div class="g_id_signin"
+       data-type="standard"
+       data-size="large"
+       data-theme="outline"
+       data-text="sign_in_with"
+       data-shape="rectangular"
+       data-logo_alignment="left">
+  </div>
+
+  <hr>
+
+  <h3>API Response:</h3>
+  <pre id="result"></pre>
+
+  <script>
+    async function handleCredentialResponse(response) {
+      const idToken = response.credential;
+
+      const res = await fetch('http://localhost:5256/api/superAdmin/unifiedLogin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ idToken })
+      });
+
+      const data = await res.json();
+      document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+      
+      if (res.ok) {
+        localStorage.setItem('authToken', data.token); // store token if needed
+      }
+    }
+  </script>
+</body>
+</html>

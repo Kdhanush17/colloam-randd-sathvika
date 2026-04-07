@@ -106,3 +106,10 @@ dist
 .tern-port
 package-lock.json
 errorLogs
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Config files with secrets (if used locally)
+config/appConfig.js
